@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8b3d68">
+<title>Priya Bag Collection</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fff8fb;color:#2b2027}
+a{text-decoration:none;color:inherit}.top{background:#8b3d68;color:#fff;text-align:center;padding:9px;font-size:14px;font-weight:700}
+header{background:linear-gradient(135deg,#fff,#f8e5ef);padding:28px 18px 22px;text-align:center;border-bottom:1px solid #ead3df}
+.logo{width:64px;height:64px;border-radius:50%;margin:auto;background:#fff;border:2px solid #b56a91;display:grid;place-items:center;font-weight:800;color:#8b3d68;letter-spacing:1px}
+h1{margin:10px 0 4px;font-size:30px;color:#7b315c}.tag{margin:0;color:#6f5a65}
+.offer{margin:18px auto 0;max-width:680px;background:#8b3d68;color:#fff;border-radius:18px;padding:15px;font-weight:800;font-size:18px;box-shadow:0 8px 25px #8b3d6833}
+.container{max-width:1050px;margin:auto;padding:22px 15px}.section-title{text-align:center;color:#7b315c;margin:10px 0 18px;font-size:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px #4b20300f;border:1px solid #eedee6}
+.card img{width:100%;height:300px;object-fit:cover;display:block}.cardbody{padding:14px}.price{font-size:21px;font-weight:800;color:#8b3d68}.btn{display:block;text-align:center;background:#25D366;color:#fff;padding:12px;border-radius:12px;font-weight:800;margin-top:10px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:25px}.info div{background:#fff;padding:16px;border-radius:15px;border:1px solid #eedee6;text-align:center}
+.status{margin-top:28px;background:#fff;border-radius:18px;padding:20px;border:1px solid #eedee6}.status input{width:100%;padding:13px;border:1px solid #d9c1ce;border-radius:10px;font-size:16px;margin:8px 0}.status button{width:100%;border:0;background:#8b3d68;color:#fff;padding:13px;border-radius:10px;font-size:16px;font-weight:800}.result{margin-top:12px;padding:12px;border-radius:10px;background:#faf1f6;display:none}
+footer{margin-top:28px;background:#2b2027;color:#fff;text-align:center;padding:25px 15px}.wa{position:fixed;right:16px;bottom:16px;background:#25D366;color:#fff;border-radius:50px;padding:14px 18px;font-weight:900;box-shadow:0 8px 25px #0003;z-index:5}
+.note{font-size:13px;color:#76636d}
+</style>
+</head>
+<body>
+<div class="top">✨ NEW OFFER • BUY 2 GET 1 FREE ✨</div>
+<header>
+  <div class="logo">PB</div>
+  <h1>Priya Bag Collection</h1>
+  <p class="tag">Stylish • Premium • Beautiful Bags</p>
+  <div class="offer">👜 1 Bag ₹600 &nbsp; | &nbsp; 🎁 Buy 2 Get 1 Free</div>
+</header>
+
+<main class="container">
+  <h2 class="section-title">हमारे Bags</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="gallery1.jpg" alt="Priya Bag Collection bags">
+      <div class="cardbody"><div class="price">₹600 / Bag</div><div class="note">सभी bags का same price</div>
+      <a class="btn" href="https://wa.me/918306867722?text=Namaste%20Priya%20Bag%20Collection%2C%20mujhe%20bag%20order%20karna%20hai.%20Please%20details%20bhejiye.">WhatsApp पर Order करें</a></div>
+    </article>
+    <article class="card">
+      <img src="gallery2.jpg" alt="Embroidered and customised bags">
+      <div class="cardbody"><div class="price">₹600 / Bag</div><div class="note">सभी bags का same price</div>
+      <a class="btn" href="https://wa.me/918306867722?text=Namaste%20Priya%20Bag%20Collection%2C%20mujhe%20ye%20bag%20order%20karna%20hai.">यह Bag Order करें</a></div>
+    </article>
+    <article class="card">
+      <img src="gallery3.jpg" alt="Priya Bag Collection product gallery">
+      <div class="cardbody"><div class="price">₹600 / Bag</div><div class="note">सभी bags का same price</div>
+      <a class="btn" href="https://wa.me/918306867722?text=Namaste%20Priya%20Bag%20Collection%2C%20mujhe%20bag%20order%20karna%20hai.">WhatsApp पर पूछें</a></div>
+    </article>
+  </div>
+
+  <div class="info">
+    <div>💰 <b>Same Price</b><br>हर Bag ₹600</div>
+    <div>🎁 <b>Special Offer</b><br>Buy 2 Get 1 Free</div>
+    <div>📲 <b>Easy Order</b><br>WhatsApp से Order</div>
+    <div>🚫 <b>COD</b><br>उपलब्ध नहीं</div>
+  </div>
+
+  <section class="status">
+    <h2 class="section-title" style="margin-top:0">📦 Order Status</h2>
+    <p class="note">अपना Order Number डालकर status देखें।</p>
+    <input id="orderNo" placeholder="जैसे: PBC1001">
+    <button onclick="checkOrder()">Order Search करें</button>
+    <div id="result" class="result"></div>
+    <p class="note" style="margin-top:12px">Order Number नहीं मिला? WhatsApp पर हमें message करें।</p>
+  </section>
+</main>
+
+<a class="wa" href="https://wa.me/918306867722?text=Namaste%20Priya%20Bag%20Collection%2C%20mujhe%20bag%20order%20karna%20hai.">💬 WhatsApp Order</a>
+
+<footer>
+  <b>Priya Bag Collection</b><br>
+  WhatsApp: 8306867722<br><br>
+  <span class="note" style="color:#e9dce4">© 2026 Priya Bag Collection • All rights reserved</span>
+</footer>
+
+<script>
+const orders={
+  "PBC1001":{status:"Order Confirmed",details:"आपका order confirm हो गया है।"},
+  "PBC1002":{status:"Processing",details:"आपका order तैयार किया जा रहा है।"},
+  "PBC1003":{status:"Shipped",details:"आपका parcel dispatch हो चुका है।"}
+};
+function checkOrder(){
+ const n=document.getElementById("orderNo").value.trim().toUpperCase();
+ const r=document.getElementById("result"); r.style.display="block";
+ if(orders[n]) r.innerHTML="<b>"+orders[n].status+"</b><br>"+orders[n].details;
+ else r.innerHTML="Order Number नहीं मिला। कृपया सही number डालें या WhatsApp पर संपर्क करें।";
+}
+</script>
+</body>
+</html>
